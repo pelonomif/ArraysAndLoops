@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -13,103 +10,37 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="">
+                
+        <script>
 
 
             //Below you shall find a tasks array which we will use for the rest of this challenge
             //One line below this is the tasksCompleted array that we are going to use further use
-            tasks = ['swim', 'eat', 'study', 'read', 'sleep', 'awake', 'breakfast', 'party', 'relax', 'exercise'];;
-            tasksCompleted  = [true, false, true, true, false];
+            let tasks = ['swim', 'eat', 'study', 'read', 'sleep', 'awake', 'breakfast', 'party', 'relax', 'exercise'];;
+            let tasksCompleted  = [true, false, true, true, false];
 
             //Activity 1 - Edit the tasksCompleted array by programmatically doing the following:
             /*  1) Remove the first completed task*/
-            let tasksCompleted = prompt("Please enter the task you've completed");
-            switch (tasks[""]){
-                case "swim":
-                tasks.splice(1, 1);
-               break;
+            const index = tasksCompleted.indexOf(true);
+            console.log(index);
 
-              console.log(removed);
-              break;
-
-                case "eat":
-                 tasks.splice(2, 1);
-               break;
-
-              console.log(removed);
-              break;
-
-              case "study":
-                 tasks.splice(3, 1);
-               break;
-
-              console.log(removed);
-              break;
-
-              case "sleep":
-                 tasks.splice(4, 1);
-               break;
-
-              console.log(removed);
-              break;
-
-              case "awake":
-                 tasks.splice(5, 1);
-               break;
-
-              console.log(removed);
-              break;
-
-              case "breakfast":
-                 tasks.splice(6, 1);
-               break;
-
-              console.log(removed);
-              break;
-
-              case "party":
-                 tasks.splice(7, 1);
-               break;
-
-              console.log(removed);
-              break;
-
-              case "relax":
-                 tasks.splice(8, 1);
-               break;
-
-              console.log(removed);
-              break;
-
-              case "exercise":
-                 tasks.splice(9, 1);
-               break;
-
-              console.log(removed);
-              break;
-
-
-            }
-
-                
+            tasksCompleted.splice(index, tasksCompleted[index]);
+            console.log("Activity 1.1:", tasksCompleted);
                 
             /*     2) Add a new completed task of false at beginning of the array*/
             tasksCompleted  = [true, false, true, true, false];
 
             tasksCompleted.unshift(false);
-            console.log(tasksCompleted);
+            console.log("Activity 1.2:",tasksCompleted);
 
             /*     3) Add a new completed task of true at the end of the array*/
-           tasksCompleted.push("true");
-           console.log(tasksCompleted);
+           tasksCompleted.push(true);
+           console.log("Activity 1.3:",tasksCompleted);
 
             /*    4) Add two more completed tasks with a boolean value of your choice, to the end of the array*/
-             tasksCompleted.push("true");
-           console.log(tasksCompleted);
+             tasksCompleted.push(true);
+             tasksCompleted.push(false);
+           console.log("Activity 1.4:",tasksCompleted);
            
            
 
@@ -117,18 +48,18 @@
             //Activity 2 - Complete this function. 
             //Create a for loop that can loop through an array and print out all the array items in the console.
             //This function takes a parameter of arrayName.
-                function displayArray(arrayName){
-                //Add your code below
-
-
-
+            console.log("Activity 2");
+            function displayArray(arrayName){
+                console.log(arrayName.length);
+                for (let index = 0; index < arrayName.length; index++){
+                console.log(arrayName[index]);
                 }
+            }
                 
             //Activity 3 - Print the tasks array to the console by using the function you created in Activity 2
             //Add your code below
-
-
-
+            console.log("Activity 3");
+             displayArray(tasks);
             //Activity 4 - Complete this function.
             //The purpose of this function is to calculate the sum of all the values in an array.
             //Create a variable inside this function called total and set it equal to 0.
@@ -170,6 +101,6 @@
             //Refer to the Arguments method taught in the 3rd lesson
             //Add your code below
 
-                    </script>
+        </script>
             </body>
             </html>
